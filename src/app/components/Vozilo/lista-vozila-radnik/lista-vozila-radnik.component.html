@@ -4,20 +4,18 @@
             <th>Marka</th>
             <th>Model</th>
             <th>Godiste</th>
-            <th>Režerviši</th>
+            <th>Izmeni</th>
         </tr>
     </thead>
     <tbody>
         @for (vozilo of vozila; track vozilo.IDVozila) {
             <tr>
+                <td>{{ vozilo.IDVozila }}</td>
                 <td>{{ vozilo.Marka }}</td>
                 <td>{{ vozilo.Model }}</td>
                 <td>{{ vozilo.Godiste }}</td>
-                @if (vozilo.korisnikRezervisao && vozilo.korisnikRezervisao == currentUser) {
-                    <td><button class="btn btn-danger" (click)="otkaziRezervaciju(vozilo)">Otkaži rezervaciju</button></td>
-                } @else {
-                    <td><button class="btn btn-primary" (click)="rezervisiVozilo(vozilo)">Rezerviši vozilo</button></td>
-                }
+                <td><button class="btn btn-primary" [routerLink]="['/vozila/editVozilo', vozilo.IDVozila]">Izmeni</button></td>
+                <td><button class="btn btn-danger" (click)="deleteVozilo(vozilo.IDVozila)">Obriši</button></td>
             </tr>
         }
     </tbody>

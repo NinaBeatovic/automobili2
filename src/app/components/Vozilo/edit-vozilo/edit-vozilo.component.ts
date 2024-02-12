@@ -16,6 +16,7 @@ export class EditVoziloComponent implements OnInit {
   idVozila: string = '';
   vozilo: Vozilo = new Vozilo();
   izmenjeno: Boolean = false;
+  
 
   constructor(private voziloService: VoziloServiceService, private route: ActivatedRoute) {}
 

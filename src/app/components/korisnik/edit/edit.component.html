@@ -1,0 +1,26 @@
+<form class="form-group">
+    <div class="form-group">
+        <label>Ime</label>
+        <input type="text" class="form-contol" id="ime" [(ngModel)]="this.korisnik.Ime" name="Ime"/>
+    </div>
+
+    <div class="form-group mt-2">
+        <label>Prezime</label>
+        <input type="text" class="form-contol" id="prezime" [(ngModel)]="this.korisnik.Prezime" name="Prezime"/>
+    </div>
+
+    <div class="form-group mt-2">
+        <label>Email</label>
+        <input type="text" class="form-contol" id="email" [(ngModel)]="this.korisnik.EMail" name="Email"/>
+    </div>
+
+    <div class="form-group mt-2">
+        <label>Email</label>
+        <input type="text" class="form-contol" id="rola" [(ngModel)]="this.korisnik.Rola" name="Rola"/>
+    </div>
+    <button class="btn btn-primary mt-2"(click)="updateKorisnik()">Izmeni</button>
+    <button class="btn btn-primary mt-2" routerLink="/korisnik/lista-korisnika">Nazad</button>
+   <div class="alert alert-success" [hidden]="!izmenjeno">
+    <h5>Uspesno izmenjeni podaci</h5>
+   </div>
+</form>

@@ -1,0 +1,41 @@
+<div class="row justify-content-center">
+    <div class="col-md-6">
+    <div class="card">
+        <div class="card-header">
+            Registruj se
+        </div>
+        <div class="card-body">
+            <div class="form-group">
+                <label for="ime">Ime</label>
+                <input type="text" class="form-control" id="ime" placeholder="Unesite ime" [(ngModel)]="this.ime" required>
+            </div>
+            <div class="form-group">
+                <label for="prezime">Prezime</label>
+                <input type="text" class="form-control" id="prezime" placeholder="Unesite prezime" [(ngModel)]="this.prezime" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email adresa</label>
+                <input type="email" class="form-control" id="email" placeholder="Unesite email adresu" [(ngModel)]="this.email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Lozinka</label>
+                <input type="password" class="form-control" id="password" placeholder="Unesite lozinku" [(ngModel)]="this.password" required>
+            </div>
+            <button class="btn btn-primary mt-2" (click)="register()">Registruj se</button>
+            <button class="btn btn-link" [routerLink]="['/korisnik/login']">Uloguj se</button>
+        </div>
+    </div>
+    @if (errorMsg !== '') {
+        <div class="card mt-2">
+            <div class="card-header">
+            Greška
+            </div>
+            <div class="card-body">
+            {{ errorMsg }}
+            </div>
+        </div>
+    }
+    </div>
+</div>
+
+

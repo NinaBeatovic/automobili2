@@ -1,0 +1,23 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th>Ime</th>
+            <th>Prezime</th>
+            <th>EMail</th>
+            
+            <th>Rola</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (korisnik of korisnici; track korisnik.IDKorisnika) {
+            <tr>
+                <td>{{ korisnik.Ime }}</td>
+                <td>{{ korisnik.Prezime }}</td>
+                <td>{{ korisnik.EMail }}</td>
+                <td>{{ korisnik.Rola }}</td>
+                <td><button class="btn btn-primary" [routerLink]="['/korisnici/editKorisnik', korisnik.IDKorisnika]">Izmeni</button></td>
+                <td><button class="btn btn-danger" [routerLink]="['/korisnici/deleteKorisnik', korisnik.IDKorisnika]">Obrisi</button></td>
+            </tr>
+        }
+    </tbody>
+</table>
