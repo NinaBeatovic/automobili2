@@ -1,0 +1,19 @@
+<form class="form-group">
+    <div class="form-group">
+        <label>Marka</label>
+        <input type="text" class="form-control" id="marka" [(ngModel)]="this.vozilo.Marka" name="Marka"/>
+    </div>
+    <div class="form-group mt-2">
+        <label>Model</label>
+        <input type="text" class="form-control" id="marka" [(ngModel)]="this.vozilo.Model" name="Model"/>
+    </div>
+    <div class="form-group mt-2">
+        <label>Godiste</label>
+        <input type="text" class="form-control" id="marka" [(ngModel)]="this.vozilo.Godiste" name="Godiste"/>
+    </div>
+    <button class="btn btn-primary mt-2"(click)="updateVozilo()">Izmeni</button>
+    <button class="btn btn-primary mt-2" routerLink="/vozila/listaVozila">Nazad</button>
+    <div class="alert alert-success" [hidden]="!izmenjeno">
+        <h5>Uspesno izmenjeni podaci</h5>
+    </div>
+</form>

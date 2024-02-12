@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "automobili-c9570": {
+      "hosting": {
+        "automobili": [
+          "automobili-c9570"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "automobili-c9570"
+  }
+}

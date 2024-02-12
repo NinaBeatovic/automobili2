@@ -91,6 +91,23 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "version": 2
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "automobili:build:production",
+              "serveTarget": "automobili:serve:production"
+            },
+            "development": {
+              "buildTarget": "automobili:build:development",
+              "serveTarget": "automobili:serve:development"
+            }
+          },
+          "defaultConfiguration": "production"
         }
       }
     }

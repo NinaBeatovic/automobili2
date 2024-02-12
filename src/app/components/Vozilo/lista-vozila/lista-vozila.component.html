@@ -1,0 +1,22 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Marka</th>
+            <th>Model</th>
+            <th>Godiste</th>
+            <th>Izmeni</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (vozilo of vozila; track vozilo.IDVozila) {
+            <tr>
+                <td>{{ vozilo.IDVozila }}</td>
+                <td>{{ vozilo.Marka }}</td>
+                <td>{{ vozilo.Model }}</td>
+                <td>{{ vozilo.Godiste }}</td>
+                <td><button class="btn btn-primary" [routerLink]="['/vozila/editVozilo', vozilo.IDVozila]">Izmeni</button></td>
+            </tr>
+        }
+    </tbody>
+</table>
